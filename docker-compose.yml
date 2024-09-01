@@ -13,6 +13,7 @@ services:
       - ./.env
     depends_on:
       - mongo
+      - redis
     volumes:
       - ./src:/app/src
   mongo:
