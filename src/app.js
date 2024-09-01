@@ -1,7 +1,7 @@
 // 3rd party libraries
 const express = require("express")
 const bodyParser = require("body-parser")
-const redis = require("redis")
+// const redis = require("redis")
 
 // own files
 require("./config/config")
@@ -10,14 +10,14 @@ require("./config/config")
 const app = express()
 const PORT = process.env.PORT
 
-const redisClient = redis.createClient({ url: process.env.REDIS_URL })
-redisClient.on("error", (error) => {
-  console.log("Redis client Error", error)
-})
-redisClient.on("connect", () => {
-  console.log("Redis client connected successfully")
-})
-redisClient.connect()
+// const redisClient = redis.createClient({ url: process.env.REDIS_URL })
+// redisClient.on("error", (error) => {
+//   console.log("Redis client Error", error)
+// })
+// redisClient.on("connect", () => {
+//   console.log("Redis client connected successfully")
+// })
+// redisClient.connect()
 
 // configure app
 app.use(bodyParser.json())

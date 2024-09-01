@@ -36,10 +36,10 @@ services:
   #     ME_CONFIG_BASICAUTH: false
   #   depends_on:
   #     - mongo
-  redis: ## not necessirally to write "redis", you can have any name
-    image: redis
-    ports:
-      - "6379:6379"
+  # redis: ## not necessirally to write "redis", you can have any name
+  #   image: redis
+  #   ports:
+  #     - "6379:6379"
   web:
     image: nginx:1.26-alpine3.20
     ports:
