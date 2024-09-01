@@ -1,0 +1,9 @@
+services:
+  learn-docker:
+    build:
+      context: .
+      target: development
+    volumes:
+      - C:/izourne/learn/learn_docker/tresmerge/src:/app/src:ro
+    environment:
+      - NODE_ENV=development

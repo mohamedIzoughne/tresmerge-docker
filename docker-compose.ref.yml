@@ -1,0 +1,10 @@
+services:
+  learn-docker:
+    build:
+      context: .
+      target: production
+    volumes:
+      - ./src:/app/src:ro # don't have to use relativ path
+    environment:
+      - PORT=3000
+      - NODE_ENV=ref
