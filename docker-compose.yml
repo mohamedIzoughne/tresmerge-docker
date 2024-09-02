@@ -1,10 +1,10 @@
 services:
   learn-docker:
+    container_name: learn-docker-container_name
     image: izourne/tresmerge-docker
     # build:
     #   context: .
     #   dockerfile: Dockerfile
-    container_name: learn-docker-container_name
     ports:
       - "3000:3000"
     environment:
@@ -16,14 +16,14 @@ services:
       - mongo
     volumes:
       - ./src:/app/src
-  mongo:
-    image: mongo
-    restart: always
-    volumes:
-      - mongo-db:/data/db # mongo-db is just a name it's not a place in memory, this is an anonymous volume
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
+  # mongo:
+  #   image: mongo
+  #   restart: always
+  #   volumes:
+  #     - mongo-db:/data/db # mongo-db is just a name it's not a place in memory, this is an anonymous volume
+  #   environment:
+  #     MONGO_INITDB_ROOT_USERNAME: root
+  #     MONGO_INITDB_ROOT_PASSWORD: example
   # mongo-express:
   #   image: mongo-express
   #   restart: always
