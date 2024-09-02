@@ -23,7 +23,7 @@ const PORT = process.env.PORT
 app.use(bodyParser.json())
 app.get("/", (req, res, next) => {
   redisClient.set("product", "products")
-  res.send("<h1>Hello world hello newest 2!</h1>")
+  res.send("<h1>Hello world hello newest 2! Using docker hub</h1>")
 })
 
 app.get("/data", async (req, res, next) => {

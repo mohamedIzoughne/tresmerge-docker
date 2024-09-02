@@ -1,5 +1,6 @@
 services:
   learn-docker:
+    image: izourne/tresmerge-docker
     # build:
     #   context: .
     #   dockerfile: Dockerfile
